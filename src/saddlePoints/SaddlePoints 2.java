@@ -1,4 +1,6 @@
+import java.util.Random
 package saddlePoints;
+
 
 /**
  * Creates a number of random arrays, and checks each array to see
@@ -47,15 +49,35 @@ public class SaddlePoints {
      * @return
      */
     int[][] createRandomArray(int numberOfRows, int numberOfColumns, int minValue, int maxValue) {
-        return null;
-    }
+        private int r = int numberOfRows;
+        private int c = int numberOfColumns;
+        int [][] array = new int[r][c];
+        Random rand = new Random();
 
+        for (int i = 0; i < array.length; i++) {
+            for (int e = 0; e < array[i].length; e++) {
+                //e = random between range of minValue and maxValue
+                if minValue != maxValue{
+                    array[i][e] = rand.nextInt(maxValue - minValue) + minValue;
+                }
+                else{
+                    array[i][e] = minValue;
+                }
+            }
+
+        }
+
+        return array;
+    }
     /**
      * Finds the largest value in an array of integers.
      *
      * @param array The array to be searched.
      * @return The largest value in the array.
      */
+
+
+
     int largest(int[] array) {
         return Integer.MIN_VALUE;
     }
