@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random
 package saddlePoints;
 
@@ -57,7 +58,7 @@ public class SaddlePoints {
         for (int i = 0; i < array.length; i++) {
             for (int e = 0; e < array[i].length; e++) {
                 //e = random between range of minValue and maxValue
-                if minValue != maxValue{
+                if (minValue != maxValue){
                     array[i][e] = rand.nextInt(maxValue - minValue) + minValue;
                 }
                 else{
@@ -79,7 +80,16 @@ public class SaddlePoints {
 
 
     int largest(int[] array) {
-        return Integer.MIN_VALUE;
+        int max = array[0];
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max){
+                max = array[i];
+            }
+
+        }
+
+        return max;
     }
 
     /**
@@ -89,7 +99,14 @@ public class SaddlePoints {
      * @return The smallest value in the array.
      */
     int smallest(int[] array) {
-        return Integer.MAX_VALUE;
+        int min = array[0];
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min){
+                min = array[i];
+            }
+        }
+        return min;
     }
 
     /**
@@ -99,17 +116,53 @@ public class SaddlePoints {
      * @return An array of the largest values in each column.
      */
     int[] largestValues(int[][] array) {
-        return null;
+        //Find required length of new array (how many columns)
+        int x = 0;
+        for (int i = 0; i < array[0].length; i++) {
+            x++;
+        }
+        //Create new simple array to hold largest values in column
+        int[] array2 = new int[x];
+
+        //Iteration. j = row, i = column
+        for (int i = 0; i < x; i++) {
+            int large = array[0][i];
+            for (int j = 0; j < array.length; j++) {
+                if (array[j][i] >= large){
+                    large = array[j][i];
+                }
+
+            }
+            array2[i] = large;
+
+        }
+        return array2;
     }
 
     /**
-     * Returns an array containing the smallest values in each rpw of the given array.
+     * Returns an array containing the smallest values in each row of the given array.
      *
      * @param array The array to be searched.
      * @return An array of the smallest values in each row.
      */
     int[] smallestValues(int[][] array) {
-        return null;
+        //Find required length of new array (how many rows)
+        int a = 0;
+        for (int i = 0; i < array.length; i++){
+            a++;
+        }
+        //Declare and initialise new array
+        int[] array2 = new int[a];
+
+
+        int x = 0;
+        for (int i = 0; i < array.length; i++){
+            x = smallest(array[i]);
+            for (int i = 0; i < array2.length; i++){
+                array2[i] = x;
+            }
+        }
+        return array2;
     }
 
 
