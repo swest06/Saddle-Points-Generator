@@ -173,7 +173,18 @@ public class SaddlePoints {
      * @return True if the array has a saddle point, else false.
      */
     boolean hasSaddlePoint(int[][] array) {
-        return true;
+        boolean result;
+        int[] largeCol = largestValues(array);
+        int[] smallRow = smallestValues(array);
+        int x = smallest(largeCol);
+        int y = largest(smallRow);
+
+        if (x == y){
+            result = true;
+        }else{
+            result = false;
+        }
+        return result;
     }
 
     /**
