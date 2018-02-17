@@ -26,6 +26,10 @@ public class SaddlePoints {
      * @param array The array to be printed.
      */
     void printArray(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(Arrays.toString(array[i]));
+
+        }
 
     }
 
