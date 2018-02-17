@@ -40,6 +40,16 @@ public class SaddlePoints {
      * @param array The array to be checked.
      */
     void printArrayInfo(int[][] array) {
+        int row = saddlePointRow(array);
+        int col = saddlePointColumn(array);
+
+        if (hasSaddlePoint(array)){
+            System.out.println("This array has a saddle point.");
+            System.out.println("The location of this saddle point is (" + row + "," + col + ").");
+            System.out.println("The value at this saddle point is " + array[row][col] + ".");
+        }else{
+            System.out.println("This array does not have a saddle point.");
+        }
 
     }
 
