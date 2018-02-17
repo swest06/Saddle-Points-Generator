@@ -10,6 +10,10 @@ package saddlePoints;
  * @author PUT YOUR NAME HERE
  */
 public class SaddlePoints {
+    Random rand = new Random();
+    int minValue = -30;
+    int maxValue = 31;
+
     /**
      * Creates arrays various sizes (including some 2x2 arrays and some larger),
      * fills them with random values, and prints each array and information about
@@ -17,7 +21,28 @@ public class SaddlePoints {
      * one without a saddle point.
      */
     void run() {
+        boolean finished = false;
+        boolean saddlePoint = false;
+        boolean noSaddlePoint = false;
 
+        while (!finished){
+            int numberOfRows = rand.nextInt(9 - 2) + 2;
+            int numberOfColumns = rand.nextInt(9 - 2) + 2;
+
+            int[][] array = createRandomArray(numberOfColumns, numberOfRows, minValue, maxValue);
+            printArray(array);
+            printArrayInfo(array);
+            if (hasSaddlePoint(array)){
+                saddlePoint = true;
+            }else{
+                noSaddlePoint = true;
+            }
+            if(saddlePoint && noSaddlePoint){
+                finished = true;
+            }
+
+        }
+        System.out.println("Goodbye.");
     }
 
     /**
@@ -64,8 +89,8 @@ public class SaddlePoints {
      * @return
      */
     int[][] createRandomArray(int numberOfRows, int numberOfColumns, int minValue, int maxValue) {
-        private int r = int numberOfRows;
-        private int c = int numberOfColumns;
+        int r =  numberOfRows;
+        int c =  numberOfColumns;
         int [][] array = new int[r][c];
         Random rand = new Random();
 
@@ -90,9 +115,6 @@ public class SaddlePoints {
      * @param array The array to be searched.
      * @return The largest value in the array.
      */
-
-
-
     int largest(int[] array) {
         int max = array[0];
 
@@ -166,8 +188,7 @@ public class SaddlePoints {
             a++;
         }
         //Declare and initialise new array
-        int[] array2 = new int[array.length];
-
+        int[] array2 = new int[a];
 
         int x = 0;
         for (int i = 0; i < array.length; i++){
@@ -176,7 +197,6 @@ public class SaddlePoints {
         }
         return array2;
     }
-
 
     /**
      * Returns true if the given array has a saddle point, and false if it does not.
@@ -208,14 +228,16 @@ public class SaddlePoints {
      * @return The lowest-numbered row containing a saddle point.
      */
     int saddlePointRow(int[][] array) {
-
         int row = 0;
         int x = 0;
 
+        //finds smallest row value and saves location
         for (int i = 0; i < array.length; i++) {
             x = smallest(array[i]);
             int ra = i;
             int rb = 0;
+
+            //finds largest column value to verify location
             for (int j = 0; j < array[0].length ; j++) {
                 int large = array[0][j];
                 for (int k = 0; k < array.length; k++) {
@@ -223,16 +245,14 @@ public class SaddlePoints {
                         large = array[k][j];
                         rb = k;
                     }
-
                 }
+                //Checks if the smallest row value matches the largest column value
                 if (large == x && rb == ra){
                     row = ra;
-
                 }
             }
 
         }
-
         return row;
     }
 
@@ -244,16 +264,17 @@ public class SaddlePoints {
      * @param array An array containing one or more saddle points.
      * @return The lowest-numbered column containing a saddle point.
      */
-
     int saddlePointColumn(int[][] array) {
         int x = 0;
         int col = 0;
 
+        //finds smallest row value
         for (int i = 0; i < array.length; i++) {
             x = smallest(array[i]);
             int rx = i;
             int ry = 0;
 
+            //finds largest column value to verify and save location
             for (int j = 0; j < array[0].length ; j++) {
                 int large = array[0][j];
                 for (int k = 0; k < array.length; k++) {
@@ -262,11 +283,11 @@ public class SaddlePoints {
                         ry = k;
                     }
                 }
+                //Checks largest column value matches the smallest row value
                 if (large == x && ry == rx){
                     col = j;
                 }
             }
-
         }
         return col;
     }
