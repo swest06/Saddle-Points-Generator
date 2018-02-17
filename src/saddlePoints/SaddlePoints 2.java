@@ -147,20 +147,18 @@ public class SaddlePoints {
      */
     int[] smallestValues(int[][] array) {
         //Find required length of new array (how many rows)
-        int a = 0;
+        int a = array.length;
         for (int i = 0; i < array.length; i++){
             a++;
         }
         //Declare and initialise new array
-        int[] array2 = new int[a];
+        int[] array2 = new int[array.length];
 
 
         int x = 0;
         for (int i = 0; i < array.length; i++){
             x = smallest(array[i]);
-            for (int i = 0; i < array2.length; i++){
-                array2[i] = x;
-            }
+            array2[i] = x;
         }
         return array2;
     }
@@ -196,7 +194,32 @@ public class SaddlePoints {
      * @return The lowest-numbered row containing a saddle point.
      */
     int saddlePointRow(int[][] array) {
-        return -1;
+
+        int row = 0;
+        int x = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            x = smallest(array[i]);
+            int ra = i;
+            int rb = 0;
+            for (int j = 0; j < array[0].length ; j++) {
+                int large = array[0][j];
+                for (int k = 0; k < array.length; k++) {
+                    if (array[k][j] >= large){
+                        large = array[k][j];
+                        rb = k;
+                    }
+
+                }
+                if (large == x && rb == ra){
+                    row = ra;
+
+                }
+            }
+
+        }
+
+        return row;
     }
 
     /**
@@ -209,6 +232,28 @@ public class SaddlePoints {
      */
 
     int saddlePointColumn(int[][] array) {
-        return -1;
+        int x = 0;
+        int col = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            x = smallest(array[i]);
+            int rx = i;
+            int ry = 0;
+
+            for (int j = 0; j < array[0].length ; j++) {
+                int large = array[0][j];
+                for (int k = 0; k < array.length; k++) {
+                    if (array[k][j] >= large){
+                        large = array[k][j];
+                        ry = k;
+                    }
+                }
+                if (large == x && ry == rx){
+                    col = j;
+                }
+            }
+
+        }
+        return col;
     }
 }
