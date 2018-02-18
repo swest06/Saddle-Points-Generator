@@ -6,7 +6,7 @@ import org.junit.Test;
 import saddlePoints.SaddlePoints;
 
 /**
- * @author Sean West ID:13132362
+ * @author Sean West, swest06, ID:13132362
  *
  */
 public class SaddlePointsTest {

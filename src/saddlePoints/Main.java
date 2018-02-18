@@ -3,7 +3,7 @@ package saddlePoints;
 import saddlePoints.*;
 
 /**
- * @author Sean West ID: 13132362
+ * @author Sean West, swest06, ID: 13132362
  */
 public class Main {
     /**

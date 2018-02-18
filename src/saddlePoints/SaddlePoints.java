@@ -8,7 +8,7 @@ import java.util.Random;
  * Creates a number of random arrays, and checks each array to see
  * if it contains a saddle point. Prints the arrays and the results.
  *
- * @author Sean West ID: 13132362
+ * @author Sean West, swest06, ID: 13132362
  */
 public class SaddlePoints {
     Random rand = new Random();

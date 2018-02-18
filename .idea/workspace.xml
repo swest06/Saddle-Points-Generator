@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f10a810-aaf4-44b3-b3fa-dba7c6ecd4c8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/saddlePoints/Main.java" afterPath="$PROJECT_DIR$/src/saddlePoints/Main.java" />
       <change beforePath="$PROJECT_DIR$/src/saddlePoints/SaddlePoints.java" afterPath="$PROJECT_DIR$/src/saddlePoints/SaddlePoints.java" />
+      <change beforePath="$PROJECT_DIR$/test/saddlePoints/SaddlePointsTest.java" afterPath="$PROJECT_DIR$/test/saddlePoints/SaddlePointsTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/saddlePoints/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -29,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/src/saddlePoints/SaddlePoints.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+              <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,19 +39,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SaddlePointsTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SaddlePointsTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/saddlePoints/SaddlePointsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+            <state relative-caret-position="136">
+              <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1007#1008#0" expanded="true" />
-                <element signature="e#1057#1058#0" expanded="true" />
-                <element signature="e#1100#1101#0" expanded="true" />
-                <element signature="e#1151#1152#0" expanded="true" />
-                <element signature="e#1499#1500#0" expanded="true" />
-                <element signature="e#1577#1578#0" expanded="true" />
+                <element signature="e#1017#1018#0" expanded="true" />
+                <element signature="e#1067#1068#0" expanded="true" />
+                <element signature="e#1110#1111#0" expanded="true" />
+                <element signature="e#1161#1162#0" expanded="true" />
+                <element signature="e#1509#1510#0" expanded="true" />
+                <element signature="e#1587#1588#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,9 +73,9 @@
         <option value="$PROJECT_DIR$/src/saddlePoints/SaddlePoints 2.java" />
         <option value="$PROJECT_DIR$/src/saddlePoints/Main 2.java" />
         <option value="$PROJECT_DIR$/Del/SaddlePoints 2.java" />
+        <option value="$PROJECT_DIR$/src/saddlePoints/Main.java" />
         <option value="$PROJECT_DIR$/test/saddlePoints/SaddlePointsTest.java" />
         <option value="$PROJECT_DIR$/src/saddlePoints/SaddlePoints.java" />
-        <option value="$PROJECT_DIR$/src/saddlePoints/Main.java" />
       </list>
     </option>
   </component>
@@ -327,7 +329,7 @@
       <option name="presentableId" value="Default" />
       <updated>1518295656339</updated>
       <workItem from="1518295662061" duration="96000" />
-      <workItem from="1518296067967" duration="57218000" />
+      <workItem from="1518296067967" duration="58097000" />
     </task>
     <servers />
   </component>
@@ -361,7 +363,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57314000" />
+    <option name="totallyTimeSpent" value="58193000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -502,37 +504,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/saddlePoints/SaddlePointsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/saddlePoints/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1007#1008#0" expanded="true" />
-            <element signature="e#1057#1058#0" expanded="true" />
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#1151#1152#0" expanded="true" />
-            <element signature="e#1499#1500#0" expanded="true" />
-            <element signature="e#1577#1578#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/saddlePoints/SaddlePoints.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/saddlePoints/Main.java">
+    <entry file="file://$PROJECT_DIR$/test/saddlePoints/SaddlePointsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1017#1018#0" expanded="true" />
+            <element signature="e#1067#1068#0" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
+            <element signature="e#1161#1162#0" expanded="true" />
+            <element signature="e#1509#1510#0" expanded="true" />
+            <element signature="e#1587#1588#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
