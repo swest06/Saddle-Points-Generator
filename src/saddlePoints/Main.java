@@ -1,6 +1,6 @@
 package saddlePoints;
 
-import saddlePoints.SaddlePoints;
+import saddlePoints.*;
 
 /**
  * @author KLM

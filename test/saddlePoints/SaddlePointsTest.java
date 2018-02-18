@@ -1,4 +1,4 @@
-package saddlepoints;
+package saddlePoints;
 
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -22,52 +22,47 @@ public class SaddlePointsTest {
         //  assign values to them here
 
 
-        array = {6, 8, 5};
+        array = new int[]{6, 8, 5};
 
-        with = {{-9, 12, -6},
+        with = new int[][]{{-9, 12, -6},
                 { 7, 14, 5},
                 {10, -8, 3},
                 { 6, 17,-10}};
 
-        without = {{ 1, -2, 3},
+        without = new int[][]{{ 1, -2, 3},
                 {-6, 5, -4},
                 { 7, -8, 9}};
     }
 
-    /*@Test
-    public void testSomeMethod() {
-        // Put tests here
-        // Put sp. in front of every call to a method in SaddlePoints
-    }*/
 
-    @test
+    @Test
     public void testHassaddlePoint(){
         assertTrue(sp.hasSaddlePoint(with));
         assertFalse(sp.hasSaddlePoint(without));
     }
 
-    @test
+    @Test
     public void testLargest(){
         assertEquals(8, sp.largest(array));
     }
 
-    @test
+    @Test
     public void testSmallest(){
         assertEquals(5, sp.smallest(array));
     }
-    @test
+    @Test
     public void testSmallestValues(){
-        int[] aryS = {-9, 5, -8, -10}
+        int[] aryS = {-9, 5, -8, -10};
         assertArrayEquals(aryS, sp.smallestValues(with));
     }
 
-    @test
+    @Test
     public void testLargestValues(){
-        int[] aryL = {10, 17, 5}
+        int[] aryL = {10, 17, 5};
         assertArrayEquals(aryL, sp.largestValues(with));
     }
 
-    @test
+    @Test
     public void testCreateRandomArray(){
         assertArrayEquals(randArray, sp.createRandomArray(3, 4, 0, 0));
     }

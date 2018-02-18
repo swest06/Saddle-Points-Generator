@@ -1,6 +1,7 @@
-import java.util.Arrays;
-import java.util.Random
 package saddlePoints;
+
+import java.util.Arrays;
+import java.util.Random;
 
 
 /**
@@ -152,16 +153,11 @@ public class SaddlePoints {
      * @return An array of the largest values in each column.
      */
     int[] largestValues(int[][] array) {
-        //Find required length of new array (how many columns)
-        int x = 0;
-        for (int i = 0; i < array[0].length; i++) {
-            x++;
-        }
         //Create new simple array to hold largest values in column
-        int[] array2 = new int[x];
+        int[] array2 = new int[array[0].length];
 
         //Iteration. j = row, i = column
-        for (int i = 0; i < x; i++) {
+        for (int i = 0; i < array[0].length; i++) {
             int large = array[0][i];
             for (int j = 0; j < array.length; j++) {
                 if (array[j][i] >= large){
@@ -182,13 +178,8 @@ public class SaddlePoints {
      * @return An array of the smallest values in each row.
      */
     int[] smallestValues(int[][] array) {
-        //Find required length of new array (how many rows)
-        int a = array.length;
-        for (int i = 0; i < array.length; i++){
-            a++;
-        }
         //Declare and initialise new array
-        int[] array2 = new int[a];
+        int[] array2 = new int[array.length];
 
         int x = 0;
         for (int i = 0; i < array.length; i++){
